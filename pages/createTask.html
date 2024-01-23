@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+    <script src="https://kit.fontawesome.com/d733855d1a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/createTask.css">
+    <title>Create a Task</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href="../index.html">
+                <img src="../assets/plp-logo.png" alt="">
+            </a>
+            
+            <div class="nav_links">
+                <a href="../index.html">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <a href="./login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <div class="left-right-div-container">
+        <div class="left-div">
+            <form class="form" onsubmit = "storeTask(event)" id ="createTask">
+                <div class="task-div" id="taskdiv">
+                    <label for="Task" class="label" id="tasklabel">Task</label>
+                    <input type="text" name="task" id="task" class="input-field" placeholder = "Enter task" required>
+                </div>
+                <div class="desc-div" id = "descdiv">
+                    <label for="Desc" class="label" id="desclabel">Description</label>
+                    <input type="text" name="desc" id="desc" class="input-field" placeholder = "Description" required>
+                </div>
+                <div id="form-btns">
+                    <button type="submit" class="button add" id="addTask">󠀫󠀫<i class="fas fa-plus"></i> ADD TASK</button>
+                </div>    
+            </form>
+        </div>
+        
+        <div class="right-div" id = "right-div">
+            <div class="show-delete" id="tasks-header">
+                <h1 ><i class="fas fa-tasks"></i> My TASKS</h1>
+                <button class="button showAll" id="showALL" onclick = "showAll()">SHOW ALL</button>
+                <button class="button deleteAll" id="deleteALL" onclick = "deleteAll()">DELETE ALL</button>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/createTask.js" ></script>
+</body>
+</html>

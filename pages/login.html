@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/login.css">
+    <script src="../scripts/auth.js" type="module"></script>
     <title>Login / Register</title>
 </head>
 <body>
     <header>
         <nav class="nav">
-            <img src="../assets/plp-logo.png" alt="">
+            <a href="../index.html">
+                <img src="../assets/plp-logo.png" alt="">
+            </a>
 
             <div class="nav_links">
                 <a href="../index.html">Home</a>
@@ -21,29 +24,25 @@
         </nav>
     </header>
 
-
     <div class="login-container">
-        <div class="main">
-            <h1>Login / Sign In</h1>
-            <br>
-            <input type="email" placeholder="Enter your Email">
-            <input type="password" placeholder="Enter your Password">
-            <button type="submit">Login</button>
+        <section id="main">
+            <h1>Login</h1>
+            <input id="email" type="text" placeholder="Email">
+            <input id="password" type="password" placeholder="Password">
+            <button id="submit">Login</button>
             <p><span>or</span></p>
-            <button id="sign-up" >Sign Up</button>
+            <button id="sign-up">Create Account</button>
+        </section>
 
-        </div>
-
-        <div id="create-acct">
+        <section id="create-acct">
             <h1>Create an Account</h1>
-            <input id="email-signup" type="email" placeholder="Email">
-            <input id="confirm-email-signup" type="email" placeholder="Confirm Email">
-            <input id="password-signup" type="password" placeholder="Password">
-            <input id="confirm-password-signup" type="password" placeholder="Confirm Password">
-            <button id="create-acct-btn" >Create Account</button>
-            <button id="return-btn">Return To Login</button>
-        </div>
-    
+            <input id="email-signup" type="text" placeholder="Email *">
+            <input id="confirm-email-signup" type="email" placeholder="Confirm Email *">
+            <input id="password-signup" type="password" placeholder="Password *">
+            <input id="confirm-password-signup" type="password" placeholder="Confirm Password *">
+            <button id="create-acct-btn">Create Account</button>
+            <button id="return-btn">Return to Login</button>
+        </section>
     </div>
 </body>
 </html>
